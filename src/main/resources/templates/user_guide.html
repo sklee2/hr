@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3" lang="ko">
+<head>
+<title>User Guide</title>
+</head>
+<body>
+	<h1>이용자 가이드 입니다.</h1>
+	<div sec:authorize="isAuthenticated()">
+		Hello <span sec:authentication="name">someone</span>
+	</div>
+	<form th:action="@{/logout}" method="post">
+    	<input type="submit" value="Sign Out"/>
+    </form>
+</body>
+</html>
