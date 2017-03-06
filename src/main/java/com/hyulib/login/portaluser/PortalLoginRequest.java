@@ -35,6 +35,7 @@ public class PortalLoginRequest {
             stringBuffer.append("&userId=").append(encryptId);
             stringBuffer.append("&password=").append(encryptPassword);
             stringBuffer.append("&keyNm=").append(URLEncoder.encode(keySuffix, "euc-kr"));
+            System.out.println(stringBuffer);
             outputStream.write(stringBuffer.toString());
             outputStream.flush();
             outputStream.close();

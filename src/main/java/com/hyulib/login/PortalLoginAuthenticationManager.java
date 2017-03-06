@@ -50,7 +50,8 @@ public class PortalLoginAuthenticationManager implements AuthenticationManager {
 			e.printStackTrace();
 		}
 
-        System.out.println(ResponseObject.getData().getGaeinNo());
+//        System.out.println(ResponseObject.getData().getGaeinNo());
+
         if (ResponseObject.getCode().equals("200") || ResponseObject.getCode().equals("504") ) {
             return new UsernamePasswordAuthenticationToken(ResponseObject.getData().getGaeinNo(),
                     auth.getCredentials(), AUTHORITIES);
